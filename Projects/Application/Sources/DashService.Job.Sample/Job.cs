@@ -1,10 +1,11 @@
 ﻿using DashService.Logger;
 using System.Threading;
 using System.Threading.Tasks;
+using DashService.Job.Abstraction;
 
 namespace DashService.Job.Sample
 {
-    public class Job : JobBase
+    public class Job : JobBase, IJob
     {
         private readonly ILogger _logger;
 
