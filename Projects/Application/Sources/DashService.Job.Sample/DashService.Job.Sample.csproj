@@ -8,8 +8,8 @@
     <Reference Include="DashService.Job">
       <HintPath>..\..\Libs\DashService.Job.dll</HintPath>
     </Reference>
-    <Reference Include="DashService.Job.Framework">
-      <HintPath>..\..\Libs\DashService.Job.Framework.dll</HintPath>
+    <Reference Include="DashService.Job.Abstraction">
+      <HintPath>..\..\Libs\DashService.Job.Abstraction.dll</HintPath>
     </Reference>
     <Reference Include="DashService.Logger">
       <HintPath>..\..\Libs\DashService.Logger.dll</HintPath>
