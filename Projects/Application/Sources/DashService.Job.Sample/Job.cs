@@ -10,9 +10,9 @@ namespace DashService.Job.Sample
     {
         private readonly ILogger _logger;
 
-        public virtual string Name => "Sample Job";
-        public virtual string Description => "Test Job";
-        public virtual string Version => "1.0.0";
+        public override string Name => "Sample Job";
+        public override string Description => "Test Job";
+        public override string Version => "1.0.0";
 
         public Job(ILogger logger) : base(logger)
         {
@@ -34,7 +34,7 @@ namespace DashService.Job.Sample
                 {
                     Task.Delay(3000, cancellationToken).Wait(cancellationToken);
                 }
-                catch (Exception ex) { }
+                catch (Exception) { }
             }
             while (true);
 
