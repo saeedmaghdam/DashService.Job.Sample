@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using DashService.Job.Abstraction;
+using System;
 
 namespace DashService.Job.Sample
 {
@@ -29,7 +30,11 @@ namespace DashService.Job.Sample
 
                 _logger.Information("I'm sample job, I'm doing a process ...");
 
-                Task.Delay(3000, cancellationToken).Wait(cancellationToken);
+                try
+                {
+                    Task.Delay(3000, cancellationToken).Wait(cancellationToken);
+                }
+                catch (Exception ex) { }
             }
             while (true);
 
